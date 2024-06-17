@@ -17,7 +17,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: shasum-comment
-          # github-token: ${{ GITHUB_TOKEN }} # token with actions:read permissions on target repo
+          github-token: ${{ GITHUB_TOKEN }}
           repository: 0xb10c/guix.sigs
           run-id: ${{github.event.workflow_run.id }}
       - name: comment
